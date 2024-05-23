@@ -1,0 +1,63 @@
+a {
+  text-decoration: none;
+  color: inherit;
+}
+.wrapper {
+  background: url(./assets/bg.jpg) center;
+  background-size: cover;
+}
+/* Phone layout */
+.phone {
+  background: url(./assets/bg.jpg) center;
+  background-size: cover;
+}
+.phone::-webkit-scrollbar {
+  display: none;
+}
+
+/* Home Screen  */
+.slider {
+  width: 100%;
+  appearance: none;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+}
+.slider:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+.slider::-webkit-slider-thumb {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: radial-gradient(
+    rgba(226, 231, 75, 0.762),
+    rgba(64, 83, 2, 0.818)
+  );
+}
+#label {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  animation: slideAnimation 3s ease-in-out infinite;
+}
+@keyframes slideAnimation {
+  0%,
+  100% {
+    color: black;
+    filter: drop-shadow(0 0 10px green);
+  }
+  50% {
+    color: rgb(89, 145, 7);
+    filter: drop-shadow(0 0 10px green);
+  }
+}
+.header > i {
+  right: 10px;
+}
+.appScreen i {
+  cursor: pointer;
+}
